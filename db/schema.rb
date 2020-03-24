@@ -10,7 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_24_111627) do
+ActiveRecord::Schema.define(version: 2020_03_24_161443) do
+
+# Could not dump table "games" because of following StandardError
+#   Unknown type 'object' for column 'wordlist'
 
   create_table "words", force: :cascade do |t|
     t.string "value"

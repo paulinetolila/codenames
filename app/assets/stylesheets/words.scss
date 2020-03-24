@@ -28,6 +28,39 @@
     // flex: 1 1 200px;
 }
 
+.module-bleu {
+  background: #074D7E;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80px;
+  margin: 8px;
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.module-rouge {
+  background: #BC2E1A;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80px;
+  margin: 8px;
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.module-black {
+  background: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80px;
+  margin: 8px;
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
 .word {
   background: white;
   width: 80%;

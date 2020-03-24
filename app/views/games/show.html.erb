@@ -1,0 +1,11 @@
+<h1>L'équipe <%= @game.color %> commence !</h1>
+
+<div class="grid">
+  <% @game.wordlist.each do |word|%>
+    <div class="module">
+      <div class="word">
+        <%= word.value.upcase %>
+      </div>
+    </div>
+  <% end %>
+</div>
