@@ -1,0 +1,40 @@
+// Place all the styles related to the words controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+.grid {
+  /* Grid Fallback */
+  display: flex;
+  flex-wrap: wrap;
+
+  /* Supports Grid */
+  display: grid;
+  grid-template-columns: 10% 10% 10% 10% 10%;
+  grid-auto-rows: 15% 15% 15% 15% 15%;
+  grid-gap: 1em;
+}
+
+.module {
+  /* Demo-Specific Styles */
+  background: #F3E4D1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80px;
+
+  /* Flex Fallback */
+  margin: 8px;
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    // flex: 1 1 200px;
+}
+
+.word {
+  background: white;
+  width: 80%;
+  align-items: center;
+  text-align: center;
+  padding: 5px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+
+}
