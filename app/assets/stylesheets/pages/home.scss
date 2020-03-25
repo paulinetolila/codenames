@@ -1,0 +1,52 @@
+@import "../config/colors";
+
+.box {
+  display:flex;
+  flex-direction: column;
+  background-image: url("home_banner.png");
+  width: 210vh;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  padding: 30px;
+}
+.grid-container {
+  display:flex;
+  flex-direction: column;
+  background-color: white;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.grid-home {
+  display: flex;
+  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 5% 5% 5% 5% 5% 5% 5% 5% 5% 5%;
+  grid-auto-rows: 5% 5% 5% 5% 5% 5% 5% 5% 5% 5%;
+  grid-gap: 1em;
+  margin-left:110px;
+}
+
+.module-home {
+  background-color: $red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 24px;
+  width: 28px;
+  margin: 6px;
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.module-home a {
+  text-decoration: none;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+}

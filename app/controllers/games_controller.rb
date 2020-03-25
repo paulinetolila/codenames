@@ -6,4 +6,8 @@ class GamesController < ApplicationController
   def espions
     @game = Game.find(params[:id])
   end
+
+  def home
+    @games = Game.all
+  end
 end

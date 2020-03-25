@@ -1,12 +1,11 @@
 // Place all the styles related to the words controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+@import "../config/colors";
+
 .grid {
-  /* Grid Fallback */
   display: flex;
   flex-wrap: wrap;
-
-  /* Supports Grid */
   display: grid;
   grid-template-columns: 10% 10% 10% 10% 10%;
   grid-auto-rows: 15% 15% 15% 15% 15%;
@@ -14,8 +13,7 @@
 }
 
 .module {
-  /* Demo-Specific Styles */
-  background: #F3E4D1;
+  background: $yellow;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -29,7 +27,7 @@
 }
 
 .module-bleu {
-  background: #074D7E;
+  background: $blue;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -40,7 +38,7 @@
 }
 
 .module-rouge {
-  background: #BC2E1A;
+  background: $red;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -69,4 +67,8 @@
   padding: 5px;
   font-family: 'Poppins', sans-serif;
   font-size: 14px;
+}
+
+h1 {
+  font-family: 'Poppins', sans-serif;
 }

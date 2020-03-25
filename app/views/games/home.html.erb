@@ -1,5 +1,18 @@
-<div class = container style="background-image: url('<%= image_path 'home_banner.png' %>');">
-  <h1>
-    Hello les amis!
-  </h1>
+<div class="container">
+  <div class="box">
+    <div class="grid-container">
+
+      <h1>Choisis ta partie!</h1>
+
+      <div class="title">
+        <div class="grid-home">
+          <% @games.each do |game|%>
+            <div class="module-home">
+              <%= link_to game.id, game_path(game), class: "title"%>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
