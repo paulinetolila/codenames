@@ -1,9 +1,19 @@
 
 const colorChange = () => {
-  document.querySelectorAll("module").forEach((module) => {
-    module.addEventListener("click", (event) => {
-      event.currentTarget.classList.toggle("module");
-      event.currentTarget.classList.toggle("module-bleu");
+  const modules = document.querySelectorAll(".module");
+  modules.forEach((card) => {
+    card.addEventListener("dblclick", (event) => {
+      if (card.classList[1] === "rouge") {
+        card.classList.toggle('module');
+        card.classList.toggle('module-rouge');
+      } else if (card.classList[1] === "bleu") {
+        card.classList.toggle('module');
+        card.classList.toggle('module-bleu');
+      } else if (card.classList[1] === "black") {
+        card.classList.toggle('module');
+        card.classList.toggle('module-black');
+      } else {
+      }
     });
   });
 };
@@ -31,4 +41,4 @@ const colorChange = () => {
 //   });
 // };
 
-export default colorChange;
+export { colorChange };

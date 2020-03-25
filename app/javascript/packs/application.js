@@ -16,3 +16,9 @@ require("channels")
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
 import { colorChange } from '../components/card';
+
+
+  // Call your JS functions here
+document.addEventListener('turbolinks:load', () => {
+  colorChange();
+});
