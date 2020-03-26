@@ -12,8 +12,18 @@
 
 ActiveRecord::Schema.define(version: 2020_03_26_173437) do
 
-# Could not dump table "games" because of following StandardError
-#   Unknown type 'object' for column 'wordlist'
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
+  create_table "games", force: :cascade do |t|
+    t.string "color"
+    t.string "wordlist", array: true
+    t.string "colors", array: true
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["colors"], name: "index_games_on_colors", using: :gin
+    t.index ["wordlist"], name: "index_games_on_wordlist", using: :gin
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -31,9 +41,6 @@ ActiveRecord::Schema.define(version: 2020_03_26_173437) do
 
   create_table "words", force: :cascade do |t|
     t.string "value"
-    t.string "color"
-    t.boolean "discovered", default: false
-    t.integer "position"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
