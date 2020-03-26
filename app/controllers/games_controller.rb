@@ -1,5 +1,8 @@
 class GamesController < ApplicationController
+  skip_before_action :authenticate_user!, only: :home
+
   def show
+    @user = current_user
     @game = Game.find(params[:id])
   end
 

@@ -30,4 +30,8 @@
   <% end %>
 </div>
 
-<%= link_to "Espion?", espions_path(@game), target: :_blank%>
+<%= link_to "Espion?", espions_path(@game), target: :_blank, class: "espion btn btn-primary"%>
+<div id="user" data-mail="<%=@user.email%>">
+</div>
+<ol class="liste">
+</ol>

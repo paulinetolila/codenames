@@ -21,6 +21,7 @@
   align-items: center;
   border-radius: 5px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  padding: 16px;
 }
 
 .grid-home {
@@ -49,4 +50,10 @@
   text-decoration: none;
   color: white;
   font-family: 'Poppins', sans-serif;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-around;
+  width:200px;
 }

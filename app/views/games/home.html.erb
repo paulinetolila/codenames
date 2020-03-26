@@ -4,7 +4,7 @@
 
       <h1>Choisis ta partie!</h1>
 
-      <div class="title">
+      <div>
         <div class="grid-home">
           <% @games.each do |game|%>
             <div class="module-home">
@@ -13,6 +13,11 @@
           <% end %>
         </div>
       </div>
+      <div class="buttons">
+      <%= link_to "Sign up", new_user_registration_path, class: "btn btn-danger"%>
+      <%= link_to "Sign in", new_user_session_path, class: "btn btn-primary"%>
+      </div>
     </div>
   </div>
 </div>
+
