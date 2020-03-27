@@ -1,37 +1,39 @@
-<h1>L'équipe <%= @game.color %> commence !</h1>
+<div class="container">
+  <h1>L'équipe <%= @game.color %> commence !</h1>
 
-<div class="grid">
-  <% @game.wordlist.each do |word|%>
-    <% if word.color == "bleu"%>
-      <div class="module bleu">
-        <div class="word">
-          <%= word.value.upcase %>
+  <div class="grid">
+    <% @game.wordlist.each do |word|%>
+      <% if word.color == "bleu"%>
+        <div class="module bleu">
+          <div class="word">
+            <%= word.value.upcase %>
+          </div>
         </div>
-      </div>
-    <% elsif word.color == "rouge"%>
-      <div class="module rouge">
-        <div class="word">
-          <%= word.value.upcase %>
+      <% elsif word.color == "rouge"%>
+        <div class="module rouge">
+          <div class="word">
+            <%= word.value.upcase %>
+          </div>
         </div>
-      </div>
-    <% elsif word.color == "jaune"%>
-      <div class="module jaune">
-        <div class="word">
-          <%= word.value.upcase %>
+      <% elsif word.color == "jaune"%>
+        <div class="module jaune">
+          <div class="word">
+            <%= word.value.upcase %>
+          </div>
         </div>
-      </div>
-    <% else %>
-      <div class="module black">
-        <div class="word">
-          <%= word.value.upcase %>
+      <% else %>
+        <div class="module black">
+          <div class="word">
+            <%= word.value.upcase %>
+          </div>
         </div>
-      </div>
+      <% end %>
     <% end %>
-  <% end %>
-</div>
+  </div>
 
-<%= link_to "Espion?", espions_path(@game), target: :_blank, class: "espion btn btn-primary"%>
-<div id="user" data-mail="<%=@user.email%>">
+  <%= link_to "Espion?", espions_path(@game), target: :_blank, class: "espion btn btn-primary"%>
+  <div id="user" data-mail="<%=@user.email%>">
+  </div>
+  <ol class="liste">
+  </ol>
 </div>
-<ol class="liste">
-</ol>

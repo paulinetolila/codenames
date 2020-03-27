@@ -1,4 +1,5 @@
 class Game < ApplicationRecord
   validates :color, presence: true
-  serialize :wordlist
+  serialize :wordlist, Array
+  # serialize :colors, Array
 end

@@ -159,60 +159,60 @@ puts 'Creating games'
 100.times do
   redorblue = ["bleue", "rouge"].sample
   game = Game.new(color: redorblue)
-  game.colors = ["jaune", "jaune", "jaune", "jaune", "jaune", "jaune", "jaune", "jaune", "jaune", "jaune",
-    "jaune", "jaune", "jaune", "jaune", "jaune", "jaune", "jaune", "jaune", "jaune", "jaune", "jaune", "jaune", "jaune", "jaune", "jaune"]
-  game.wordlist = {}
-  words = Word.all.sample(25)
-  words.each do |word|
-    game.wordlist << word.value
-  end
+  # game.colors = ["jaune", "jaune", "jaune", "jaune", "jaune", "jaune", "jaune", "jaune", "jaune", "jaune",
+  #   "jaune", "jaune", "jaune", "jaune", "jaune", "jaune", "jaune", "jaune", "jaune", "jaune", "jaune", "jaune", "jaune", "jaune", "jaune"]
+  # game.wordlist = []
+  game.wordlist = Word.all.sample(25)
+  # words.each do |word|
+  #   game.wordlist << word.value
+  # end
   game.wordlist.delete('-')
   if game.color == "bleue"
-    game.colors[8] = "bleu"
-    game.colors[9] = "bleu"
-    game.colors[10] = "bleu"
-    game.colors[11] = "bleu"
-    game.colors[12] = "bleu"
-    game.colors[13] = "bleu"
-    game.colors[14] = "bleu"
-    game.colors[15] = "bleu"
-    game.colors[16] = "bleu"
-    game.colors[17] = "rouge"
-    game.colors[18] = "rouge"
-    game.colors[19] = "rouge"
-    game.colors[20] = "rouge"
-    game.colors[21] = "rouge"
-    game.colors[22] = "rouge"
-    game.colors[23] = "rouge"
-    game.colors[24] = "rouge"
+    game.wordlist[8].color = "bleu"
+    game.wordlist[9].color = "bleu"
+    game.wordlist[10].color = "bleu"
+    game.wordlist[11].color = "bleu"
+    game.wordlist[12].color = "bleu"
+    game.wordlist[13].color = "bleu"
+    game.wordlist[14].color = "bleu"
+    game.wordlist[15].color = "bleu"
+    game.wordlist[16].color = "bleu"
+    game.wordlist[17].color = "rouge"
+    game.wordlist[18].color = "rouge"
+    game.wordlist[19].color = "rouge"
+    game.wordlist[20].color = "rouge"
+    game.wordlist[21].color = "rouge"
+    game.wordlist[22].color = "rouge"
+    game.wordlist[23].color = "rouge"
+    game.wordlist[24].color = "rouge"
   else
-    game.colors[8] = "rouge"
-    game.colors[9] = "rouge"
-    game.colors[10] = "rouge"
-    game.colors[11] = "rouge"
-    game.colors[12] = "rouge"
-    game.colors[13] = "rouge"
-    game.colors[14] = "rouge"
-    game.colors[15] = "rouge"
-    game.colors[16] = "rouge"
-    game.colors[17] = "bleu"
-    game.colors[18] = "bleu"
-    game.colors[19] = "bleu"
-    game.colors[20] = "bleu"
-    game.colors[21] = "bleu"
-    game.colors[22] = "bleu"
-    game.colors[23] = "bleu"
-    game.colors[24] = "bleu"
+    game.wordlist[8].color = "rouge"
+    game.wordlist[9].color = "rouge"
+    game.wordlist[10].color = "rouge"
+    game.wordlist[11].color = "rouge"
+    game.wordlist[12].color = "rouge"
+    game.wordlist[13].color = "rouge"
+    game.wordlist[14].color = "rouge"
+    game.wordlist[15].color = "rouge"
+    game.wordlist[16].color = "rouge"
+    game.wordlist[17].color = "bleu"
+    game.wordlist[18].color = "bleu"
+    game.wordlist[19].color = "bleu"
+    game.wordlist[20].color = "bleu"
+    game.wordlist[21].color = "bleu"
+    game.wordlist[22].color = "bleu"
+    game.wordlist[23].color = "bleu"
+    game.wordlist[24].color = "bleu"
   end
-  game.colors[0] = "noir"
-  game.colors[1] = "jaune"
-  game.colors[2] = "jaune"
-  game.colors[3] = "jaune"
-  game.colors[4] = "jaune"
-  game.colors[5] = "jaune"
-  game.colors[6] = "jaune"
-  game.colors[7] = "jaune"
-  game.colors.shuffle!
+  game.wordlist[0].color = "noir"
+  game.wordlist[1].color = "jaune"
+  game.wordlist[2].color = "jaune"
+  game.wordlist[3].color = "jaune"
+  game.wordlist[4].color = "jaune"
+  game.wordlist[5].color = "jaune"
+  game.wordlist[6].color = "jaune"
+  game.wordlist[7].color = "jaune"
+  game.wordlist.shuffle!
   game.save
 end
 puts 'Games finished!'

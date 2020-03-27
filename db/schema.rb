@@ -17,12 +17,9 @@ ActiveRecord::Schema.define(version: 2020_03_26_173437) do
 
   create_table "games", force: :cascade do |t|
     t.string "color"
-    t.string "wordlist", array: true
-    t.string "colors", array: true
+    t.string "wordlist"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["colors"], name: "index_games_on_colors", using: :gin
-    t.index ["wordlist"], name: "index_games_on_wordlist", using: :gin
   end
 
   create_table "users", force: :cascade do |t|
@@ -41,6 +38,7 @@ ActiveRecord::Schema.define(version: 2020_03_26_173437) do
 
   create_table "words", force: :cascade do |t|
     t.string "value"
+    t.string "color"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

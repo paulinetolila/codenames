@@ -1,32 +1,34 @@
-<h1>L'équipe <%= @game.color %> commence !</h1>
-  <div class="grid">
-    <% @game.wordlist.each do |word|%>
-      <% if word.color == "bleu"%>
-        <div class="module-bleu">
-          <div class="word">
-            <%= word.value.upcase %>
+<div class="container">
+  <h1>L'équipe <%= @game.color %> commence !</h1>
+    <div class="grid">
+      <% @game.wordlist.each do |word|%>
+        <% if word.color == "bleu"%>
+          <div class="module-bleu">
+            <div class="word">
+              <%= word.value.upcase %>
+            </div>
           </div>
-        </div>
-      <% elsif word.color == "rouge"%>
-        <div class="module-rouge">
-          <div class="word">
-            <%= word.value.upcase %>
+        <% elsif word.color == "rouge"%>
+          <div class="module-rouge">
+            <div class="word">
+              <%= word.value.upcase %>
+            </div>
           </div>
-        </div>
-      <% elsif word.color == "jaune"%>
-        <div class="module">
-          <div class="word">
-            <%= word.value.upcase %>
+        <% elsif word.color == "jaune"%>
+          <div class="module">
+            <div class="word">
+              <%= word.value.upcase %>
+            </div>
           </div>
-        </div>
-      <% else %>
-        <div class="module-black">
-          <div class="word">
-            <%= word.value.upcase %>
+        <% else %>
+          <div class="module-black">
+            <div class="word">
+              <%= word.value.upcase %>
+            </div>
           </div>
-        </div>
+        <% end %>
       <% end %>
-    <% end %>
-  </div>
+    </div>
+    </div>
 
 

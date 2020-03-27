@@ -3,11 +3,14 @@
 // You can use Sass (SCSS) here: https://sass-lang.com/
 @import "../config/colors";
 
+.container {
+  padding : 20px;
+}
 .grid {
   display: flex;
   flex-wrap: wrap;
   display: grid;
-  grid-template-columns: 10% 10% 10% 10% 10%;
+  grid-template-columns: 13% 13% 13% 13% 13%;
   grid-auto-rows: 15% 15% 15% 15% 15%;
   grid-gap: 1em;
 }
